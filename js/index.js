@@ -45,12 +45,15 @@ const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 const aTags = document.querySelectorAll('a');
-aTags[0].textContent = siteContent['nav']['nav-item-1'];
-aTags[1].textContent = siteContent['nav']['nav-item-2'];
-aTags[2].textContent = siteContent['nav']['nav-item-3'];
-aTags[3].textContent = siteContent['nav']['nav-item-4'];
-aTags[4].textContent = siteContent['nav']['nav-item-5'];
-aTags[5].textContent = siteContent['nav']['nav-item-6'];
+aTags.forEach((link, i) => link.textContent = siteContent['nav'][`nav-item-${i+1}`])
+
+// const aTags = document.querySelectorAll('a');
+// aTags[0].textContent = siteContent['nav']['nav-item-1'];
+// aTags[1].textContent = siteContent['nav']['nav-item-2'];
+// aTags[2].textContent = siteContent['nav']['nav-item-3'];
+// aTags[3].textContent = siteContent['nav']['nav-item-4'];
+// aTags[4].textContent = siteContent['nav']['nav-item-5'];
+// aTags[5].textContent = siteContent['nav']['nav-item-6'];
 
 const headerOne = document.querySelector('h1');
 headerOne.textContent = siteContent["cta"]["h1"];
